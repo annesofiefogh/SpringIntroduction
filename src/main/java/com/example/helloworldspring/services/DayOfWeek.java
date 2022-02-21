@@ -25,6 +25,15 @@ public class DayOfWeek {
         int j = (thisDate.getYear() / 100);
         int k = (thisDate.getYear() % 100);
 
+        if (m == 1){
+            m = 13;
+            j--;
+        }
+        if (m == 2){
+            m = 14;
+            j--;
+        }
+
         //First calculation
         double h = (q + Math.floor((13 * (m + 1))/5) + k + Math.floor(k/4) + Math.floor(j/4) - (2 * j)) % 7;
 
